@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>1A2B</title>
+</head>
+<body>
+	<link rel="stylesheet" href="hw6.css">
+	<h1>113306086_HW6_1A2B</h1>
+	<div class ="input-field">
+	<input type="text" id="guessnum" placeholder="four-digit number please"><button onclick = "sentValue()">guess</button><br></div>
+	<h2>record</h2><div class="record" id="record"></div>
+	<div id="result"></div>
+	<script>
+		const ans = [];
+		var count=0;
+		while(ans.length<4){
+		var num=Math.floor(Math.random()*10);
+		if(!ans.includes(num)){
+			ans.push(num);
+		}}
+	
+		const record =document.getElementById('record');
+
+
+		function sentValue(){
+			var a=0;
+			var b=0;
+		const guess =[];
+		var guessnum = document.getElementById("guessnum").value;
+		
+			if(parseInt(guessnum)<10000&&parseInt(guessnum)>1000){
+				count++;
+		for(let i=0;i<4;i++){
+			
+		guess.push(parseInt(guessnum.charAt(i)));
+		}
+		for(let i=0;i<4;i++){
+			if(guess[i]==ans[i]){a++;}
+			else if(ans.includes(guess[i])){
+				b++;
+			}
+		}
+		if(a==4){
+			alert('爽喔 成功');
+			result.innerHTML="<img src='patrick.jpg'><br>"+ans[0]+ans[1]+ans[2]+ans[3];
+		 
+		}
+		record.innerHTML=record.innerHTML+"第"+count+"次:   "+guessnum+" "+a+'A'+b+"B"+'<br>';
+		 }
+		 else{alert('輸入4位數字啦')}
+		  document.getElementById("guessnum").value = "";
+		}
+		
+		
+
+
+	</script>
+
+</body>
+</html>

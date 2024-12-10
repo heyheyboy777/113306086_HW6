@@ -1,0 +1,30 @@
+body{
+	color:#F0F0F0;
+	text-align: center;
+	background-color: #272727;
+	font-family: Arial, sans-serif;
+}
+h1{
+	color:#CCDDFF
+}
+h2{
+	
+	margin-top: 15%;
+}
+input{
+	width:20%;
+}
+button{
+		background-color:#5599FF
+}
+.record{
+	color:#FFEE99;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	border: 3px solid whitesmoke;;
+}
+
+.input-field{
+	padding-top: 20px;
+	border-top: 2px solid 	#77DDFF;;
+}
